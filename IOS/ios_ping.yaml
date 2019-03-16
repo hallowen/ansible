@@ -1,0 +1,17 @@
+---
+- name: Ping destination ip from multiple cisco devices
+  hosts: ios
+  connection: local
+  gather_facts: false
+
+  tasks:
+
+  - name: Pinging an IP address from multiple cisco devices
+    register: iosping
+    ios_ping:
+     dest: 192.168.122.205
+     count: 100
+    
+  - debug:
+      var: iosping
+

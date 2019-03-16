@@ -1,0 +1,24 @@
+---
+- name: Remove banner on Cisco IOS devices
+  connection: local
+  gather_facts: false
+  hosts: ios
+
+  tasks:
+  - name: Removing login Banner on individual Cisco IOS devices.
+    ios_banner: 
+     banner: login
+     state: absent
+  - name: Removing exec Banner on individual Cisco IOS devices.
+    ios_banner: 
+     banner: exec
+     state: absent
+  - name: Removing INCOMING Banner on individual Cisco IOS devices.
+    ios_banner: 
+     banner: incoming
+     state: absent
+
+
+
+
+

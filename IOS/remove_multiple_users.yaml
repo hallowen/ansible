@@ -1,0 +1,18 @@
+---
+- name: Remove multiple users from Cisco Routers and Switches
+  connection: local
+  hosts: ios
+  gather_facts: false
+
+  tasks:
+  
+  - name: Removing multiple users
+    ios_user:
+     aggregate:
+      - name: user1
+      - name: user2
+      - name: sandeep
+      - name: user3
+      - name: user4
+     state: absent
+

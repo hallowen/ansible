@@ -1,0 +1,15 @@
+---
+- name: Create a single user on Cisco Routers and Switches
+  connection: local
+  gather_facts: false
+  hosts: ios
+
+  tasks:
+  
+  - name: Creating user on Cisco devices.
+    ios_user: 
+     name: user1
+     state: present
+     privilege: 15
+     configured_password: cisco
+     update_password: always

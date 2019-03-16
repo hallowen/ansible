@@ -1,0 +1,11 @@
+---
+- name: Enable LLDP Cisco routers and switches
+  connection: local
+  gather_facts: false
+  hosts: ios
+
+  tasks:
+  
+  - name: Enabling LLDP 
+    ios_lldp:
+     state: present 

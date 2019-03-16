@@ -1,0 +1,27 @@
+---
+- name: Setting Banner on IOS devices
+  connection: local
+  gather_facts: false
+  hosts: ios
+
+  tasks:
+  - name: Adding login Banner on individual Cisco IOS devices.
+    ios_banner: 
+     banner: login
+     text: Sample login banner
+     state: present
+  - name: Adding exec Banner on individual Cisco IOS devices.
+    ios_banner: 
+     banner: exec
+     text: Sample login banner
+     state: present
+  - name: Adding INCOMING Banner on individual Cisco IOS devices.
+    ios_banner: 
+     text: Sample incoming banner
+     banner: incoming
+     state: present
+
+
+
+
+

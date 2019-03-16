@@ -1,0 +1,15 @@
+---
+- name: Create VRF on Cisco Routers and Switches
+  connection: local
+  gather_facts: none
+  hosts: ios
+
+  tasks:
+
+  - name: Creating VRF
+    ios_vrf:
+     name: production
+     rd: 1:100
+     route_both_ipv4: 1:100
+     interfaces: GigabitEthernet0/2
+     state: present

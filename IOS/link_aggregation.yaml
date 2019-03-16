@@ -1,0 +1,16 @@
+---
+- name: Creating portchannel between 2 switches
+  connection: local
+  gather_facts: false
+  hosts: ios
+
+  tasks:
+  
+  - name: Port-Channel connection in progress
+    ios_linkagg:
+     group: 12
+     state: absent
+     mode: active
+     members: 
+      - Ethernet0/0
+      - Ethernet0/1

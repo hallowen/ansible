@@ -1,0 +1,21 @@
+---
+- name: Check version of all Cisco IOS devices
+  hosts: ios
+  gather_facts: false
+  connection: local
+  
+  tasks:
+  - name: Getting 'SHOW VERSION' output from all the devices.
+    register: show_version
+    ios_command:
+     commands: show version
+
+  - name: Copying show version output to individual files.
+    copy:
+     content: "{{ show_version.stdout[0] }}"
+     dest: /etc/ansible/IOS/show_version/{{ inventory_hostname }}
+
+
+
+
+

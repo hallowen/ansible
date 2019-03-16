@@ -1,0 +1,11 @@
+---
+- name: Changing system attributes on Cisco devices
+  connection: local
+  hosts: ios
+  gather_facts: false
+
+  tasks:
+  
+  - name: Executing system parameter changes
+    ios_system:
+      state: absent

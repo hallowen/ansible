@@ -1,0 +1,20 @@
+---
+- name: Create multiple users on Cisco Routers and Switches
+  connection: local
+  hosts: ios
+  gather_facts: false
+
+  tasks:
+  
+  - name: Creating multiple users
+    ios_user:
+     aggregate:
+      - name: user1
+      - name: user2
+      - name: user3
+      - name: user4
+     privilege: 15
+     configured_password: cisco
+     update_password: always
+     state: present
+

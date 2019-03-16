@@ -1,0 +1,16 @@
+---
+- name: Collect all facts from Cisco Routers and Switches
+  hosts: ios
+  gather_facts: false
+  connection: local
+
+  tasks:
+  - name: Collecting all facts from Cisco Routers and Switches
+    register: collect_facts_all
+    ios_facts:
+     gather_subset: all
+  
+  - debug:
+     var: collect_facts_all
+
+

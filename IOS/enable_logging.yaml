@@ -1,0 +1,30 @@
+---
+- name: Adding logging and syslog configuration on Cisco Routers and Switches
+  connection: local
+  gather_facts: false
+  hosts: ios
+
+  tasks: 
+   
+  - name: Configuring syslog host for remote logging
+    ios_logging:
+     dest: host
+     name: 192.168.122.1
+     level: informational
+     state: present
+
+
+  - name: Configure buffer logging
+    ios_logging:
+     dest: console
+     level: informational
+     state: present
+
+  - name: Configure console logging
+    ios_logging:
+     dest: buffered
+     level: critical
+     state: present
+
+  
+

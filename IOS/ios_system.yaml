@@ -1,0 +1,21 @@
+---
+- name: Changing system attributes on Cisco devices
+  connection: local
+  hosts: ios
+  gather_facts: false
+
+  tasks:
+  
+  - name: Executing system parameter changes
+    ios_system:
+      domain_name: snyderhalos.local
+      domain_search:
+       - yahoo.com
+       - gmail.com
+      hostname: test
+      lookup_enabled: yes
+      lookup_source: GigabitEthernet0/0
+      name_servers: 
+       - 1.1.1.1
+       - 8.8.8.8
+

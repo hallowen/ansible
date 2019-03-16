@@ -1,0 +1,18 @@
+---
+- name: Check local users in all Cisco routers and switches
+  hosts: ios
+  gather_facts: false
+  connection: local
+  
+  tasks:
+  - name: Extracting user information from all Cisco routers and switches.
+    register: show_users
+    ios_command:
+     commands: show running | in username
+      
+  - debug:
+     var: show_users.stdout[0]
+
+
+
+
