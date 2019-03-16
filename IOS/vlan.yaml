@@ -1,0 +1,16 @@
+---
+- name: Vlan configuration on Cisco Switches
+  connection: local
+  gather_facts: false
+  hosts: iosswitches
+
+  tasks:
+  
+  - name: Vlan creation in progress
+    ios_vlan:
+     vlan_id: 31
+     name: IT
+     state: present
+     interfaces: 
+      - GigabitEthernet0/3
+      - GigabitEthernet0/2
