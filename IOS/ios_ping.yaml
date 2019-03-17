@@ -1,5 +1,5 @@
 ---
-- name: Ping destination ip from multiple cisco devices
+- name: Ping destination ip from multiple Cisco devices
   hosts: ios
   connection: local
   gather_facts: false
