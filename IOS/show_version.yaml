@@ -1,5 +1,5 @@
 ---
-- name: Check version of all Cisco IOS devices
+- name: Check Version of all Cisco IOS devices
   hosts: ios
   gather_facts: false
   connection: local
