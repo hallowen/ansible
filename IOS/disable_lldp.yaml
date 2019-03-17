@@ -1,5 +1,5 @@
 ---
-- name: Disable LLDP Cisco routers and switches
+- name: Disable LLDP Cisco devices
   connection: local
   gather_facts: false
   hosts: ios
