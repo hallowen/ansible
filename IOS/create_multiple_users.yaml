@@ -1,5 +1,5 @@
 ---
-- name: Create multiple users on Cisco Routers and Switches
+- name: Create multiple users on Cisco devices
   connection: local
   hosts: ios
   gather_facts: false
