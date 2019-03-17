@@ -1,5 +1,5 @@
 ---
-- name: List all configured IP addresses on Cisco switches and routers
+- name: List all configured IP addresses on Cisco devices
   connection: local
   gather_facts: false
   hosts: ios
