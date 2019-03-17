@@ -1,5 +1,5 @@
 ---
-- name: Adding logging and syslog configuration on Cisco Routers and Switches
+- name: Adding logging and syslog configuration on Cisco devices
   connection: local
   gather_facts: false
   hosts: ios
