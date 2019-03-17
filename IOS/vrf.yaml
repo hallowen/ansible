@@ -1,5 +1,5 @@
 ---
-- name: Create VRF on Cisco Routers and Switches
+- name: Create VRF on Cisco devices
   connection: local
   gather_facts: none
   hosts: ios
