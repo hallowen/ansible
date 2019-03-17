@@ -1,5 +1,5 @@
 ---
-- name: Changing system attributes on Cisco devices
+- name: Changing System attributes on Cisco devices to default
   connection: local
   hosts: ios
   gather_facts: false
