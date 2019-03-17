@@ -1,5 +1,5 @@
 ---
-- name: Creating portchannel between 2 switches
+- name: Creating Portchannel between 2 switches
   connection: local
   gather_facts: false
   hosts: ios
