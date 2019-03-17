@@ -1,5 +1,5 @@
 ---
-- name: Enable LLDP Cisco routers and switches
+- name: Enable LLDP on Cisco devices
   connection: local
   gather_facts: false
   hosts: ios
