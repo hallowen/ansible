@@ -6,11 +6,11 @@
 
   tasks:
   - name: Collecting all facts from Cisco Routers and Switches
-    register: collect_facts_all
+    register: collect_facts
     ios_facts:
      gather_subset: all
   
   - debug:
-     var: collect_facts_all
+     var: collect_facts
 
 
