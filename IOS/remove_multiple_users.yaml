@@ -1,5 +1,5 @@
 ---
-- name: Remove multiple users from Cisco Routers and Switches
+- name: Remove multiple users from Cisco devices
   connection: local
   hosts: ios
   gather_facts: false
