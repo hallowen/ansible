@@ -1,5 +1,5 @@
 ---
-- name: Remove banner on Cisco IOS devices
+- name: Remove Banner on Cisco IOS devices
   connection: local
   gather_facts: false
   hosts: ios
