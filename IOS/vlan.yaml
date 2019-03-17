@@ -1,5 +1,5 @@
 ---
-- name: Vlan configuration on Cisco Switches
+- name: Vlan Configuration on Cisco Switches
   connection: local
   gather_facts: false
   hosts: iosswitches
