@@ -1,5 +1,5 @@
 ---
-- name: Check local users in all Cisco routers and switches
+- name: Check local users in all Cisco devices
   hosts: ios
   gather_facts: false
   connection: local
