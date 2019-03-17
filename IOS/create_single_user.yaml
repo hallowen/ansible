@@ -1,5 +1,5 @@
 ---
-- name: Create a single user on Cisco Routers and Switches
+- name: Create a single user on Cisco devices
   connection: local
   gather_facts: false
   hosts: ios
