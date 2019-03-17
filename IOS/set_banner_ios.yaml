@@ -1,5 +1,5 @@
 ---
-- name: Setting Banner on IOS devices
+- name: Setting banner on IOS devices
   connection: local
   gather_facts: false
   hosts: ios
