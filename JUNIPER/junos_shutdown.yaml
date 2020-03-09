@@ -1,0 +1,13 @@
+---
+- name: Shutdown multiple JUNOS devices
+  connection: local
+  gather_facts: false
+  hosts: junos
+  roles: 
+   - Juniper.junos
+
+  tasks:
+   - name: Shutting down devices one by one
+     juniper_junos_system:
+      action: shutdown
+     
