@@ -1,0 +1,16 @@
+---
+- name: Print show version of JUNOS devices
+  hosts: junos
+  connection: local
+  gather_facts: false
+
+  tasks:
+  -   name: Gathering version information from JUNOS devices.
+      register: sh_version
+      junos_command: 
+         commands: show version
+         display: xml
+         #here we can use xml as well as json for displaying the output.
+  -   debug:
+       var: sh_version.stdout[0]
+         
