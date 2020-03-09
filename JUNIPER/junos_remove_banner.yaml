@@ -1,0 +1,11 @@
+---
+-   name: Remove banner from JUNOS devices
+    hosts: junos
+    connection: local
+    gather_facts: false
+
+    tasks: 
+    -   name: Removing banner from JUNOS devices
+        junos_banner:
+           banner: login
+           state: absent
