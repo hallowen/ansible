@@ -1,0 +1,14 @@
+---
+-   name: Configure login banner for Junos devices
+    connection: local
+    hosts: junos
+    gather_facts: false
+
+    tasks:
+    -   name: Configuring login banner
+        junos_banner:
+              banner: login
+              text: This is a test login banner
+              state: present
+       
+    
