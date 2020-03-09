@@ -1,0 +1,11 @@
+---
+  -   name: Load banner from a configuration file.
+      hosts: junos
+      connection: local
+      gather_facts: false
+
+      tasks:
+      -   name: Loading banner information from local file.
+          junos_banner:
+             banner: login
+             text: "{{ lookup('file', 'banner.cfg')}}"
