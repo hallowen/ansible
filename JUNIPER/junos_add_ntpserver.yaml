@@ -1,0 +1,10 @@
+---
+- name: Configure NTP server on JUNOS devices
+  connection: local
+  gather_facts: false
+  hosts: junos
+
+  tasks:
+  -   name: Configuring NTP server on JUNOS devices
+      junos_config:
+         src: ntp.cfg
