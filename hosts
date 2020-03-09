@@ -18,3 +18,14 @@ ansible_password=cisco
 ansible_become=yes
 ansible_become_method=enable
 ansible_become_pass=cisco
+
+[junos]
+
+192.168.0.81
+192.168.0.82
+
+[junos:vars]
+
+ansible_network_os=junos
+ansible_user=root
+ansible_password=P@ssw0rd
